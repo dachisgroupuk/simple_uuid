@@ -25,7 +25,7 @@ module SimpleUUID
       when self.class # UUID
         @bytes = bytes.to_s
       when String
-        case bytes.size
+        case bytes.bytesize
         when 16 # Raw byte array
           @bytes = bytes
         when 36 # Human-readable UUID representation; inverse of #to_guid
